@@ -1,5 +1,5 @@
 body {
-    width: 1000px;
+    width: 100%;
 }
 /*.container {
     width: 1000px;
@@ -70,7 +70,9 @@ h4 {
 
 /*Cards Section*/
 #gameSection {
-   * margin-left: 25vw;
+    *margin-left: 25vw;
+    border: 1px solid black;
+    height: 100%;
 }
 
 .card {
