@@ -4,8 +4,10 @@
     <meta charset="UTF-8">
     <title>Memory Match</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script src="http://learning-fuze.github.io/memory_match/v0.1/script.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
     <link rel="stylesheet" type="text/css" href="style.css"/>
 
@@ -23,7 +25,7 @@
     </div>
 <!--Stats section-->
     <div id="gameInfo">
-        <div id="stats">
+        <div class="stats">
             <h3>Stats:</h3>
             <br>
             <h4>Times played:</h4>
@@ -31,6 +33,14 @@
             <h4>Accuracy</h4>
             <button class="reset" type="button">Reset Game</button>
         </div>
+    </div>
+
+    <div id="gameSection">
+        <div class="card">
+            <div class="front"><img src="images/atosFront.png" alt="Card front"</div>
+            <div class="back"><img id="back" src="images/card_design.png" alt="Card Back"</div>
+        </div>
+
     </div>
 </div>
 </body>
