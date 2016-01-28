@@ -1,16 +1,18 @@
 body {
-    width: 100%;
+
 }
-/*.container {
-    width: 1000px;
+
+.container {
+    width: 80%;
     margin: auto;
-}*/
+}
 
 #header {
     border: 1px solid black;
     background-color: #ae142d;
     height: 15vh;
     position: relative;
+    border-radius: 15px;
 }
 
 h1 {
@@ -46,10 +48,11 @@ a {
     border: 1px solid black;
     background-color: #ae142d;
     float: left;
-    width: 18vw;
+    width: 9em;
     position: relative;
     height: 50vh;
-    transform: translate(0, 20%);
+    transform: translate(0, 10%);
+    border-radius: 15px;
 
 }
 
@@ -70,18 +73,26 @@ h4 {
 
 /*Cards Section*/
 #gameSection {
-    *margin-left: 25vw;
+    margin-left: 10em;
+    margin-top: 2em;
     border: 1px solid black;
     height: 100%;
+    border-radius: 15px;
+    background-image: url("images/background1.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 48%;
+    transform: translate(35%, 0);
 }
 
 .card {
     display: inline-block;
-    width: 150px;
-    height: 200px;
+    width: 100px;
+    height: 150px;
     position: relative;
-    margin: 2%;
+    margin: 1%;
     overflow: hidden;
+    opacity: .9;
 }
 
 .card img {
@@ -94,5 +105,5 @@ h4 {
 }
 
 .back:hover {
-    opacity: -1;
+    opacity: 0;
 }
