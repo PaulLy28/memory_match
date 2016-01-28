@@ -1,0 +1,23 @@
+.container {
+    width: 100%;
+    margin: auto;
+}
+
+#header {
+    border: 1px solid black;
+    background-color: #ae142d;
+    height: 15vh;
+}
+
+h1 {
+    text-align: center;
+    color: white;
+    transform: translate(0, 50%);
+}
+
+#logo {
+    position: absolute;
+    top: 20px;
+    left: 30px;
+}
+
