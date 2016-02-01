@@ -36,7 +36,7 @@ $(document).ready(function(){
                 if (matchCounter == totalMatches){
                     var winMessage = $("<div>",{
                         id: "victory",
-                        text: "WINNER WINNER CHICKEN DINNER!"
+                        text: "winner winner chicken dinner!"
                     });
                     $("body").append(winMessage);
                 }
