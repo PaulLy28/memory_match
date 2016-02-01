@@ -1,37 +1,38 @@
 /*card flipping and storing code*/
-var a = null;
-var b = null;
-var c = null;
-var d = null;
+var firstCardClicked = null;
+var secondCardClicked = null;
+var firstCardStored = null;
+var secondCardStored = null;
+
 $(document).ready(function(){
     $(".back").addClass("notFlipped");
     $(".back").click(function(){
         $(this).hide();
-        if(a === null){
-            a = $(this).prev().first().attr("src");
-            console.log("first card clicked", a);
-            c = $(this);
+        if(firstCardClicked === null){
+            firstCardClicked = $(this).prev().first().attr("src");
+            console.log("first card clicked", firstCardClicked);
+            firstCardStored = $(this);
         }
         else {
-            b = $(this).prev().first().attr("src");
-            console.log("this is card 2", b);
-            d = $(this);
-            compare(a,b);
-            a = null;
-            b = null;
-            console.log(a,b);
-            c = null;
-            d = null;
-            console.log(c,d);
+            secondCardClicked = $(this).prev().first().attr("src");
+            console.log("this is card 2", secondCardClicked);
+            secondCardStored = $(this);
+            compare(firstCardClicked, secondCardClicked);
+            firstCardClicked = null;
+            secondCardClicked = null;
+            console.log(firstCardClicked, secondCardClicked);
+            firstCardStored = null;
+            secondCardStored = null;
+            console.log(firstCardStored, secondCardStored);
         }
     });
 });
 
-function compare(a,b){
-    if (a==b) {
+function compare(firstCardClicked,secondCardClicked){
+    if (firstCardClicked == secondCardClicked) {
         console.log("match");
-        $(c).removeClass("notFlipped");
-        $(d).removeClass("notFlipped");
+        $(firstCardStored).removeClass("notFlipped");
+        $(secondCardStored).removeClass("notFlipped");
     }
     else {
         console.log("no match");
