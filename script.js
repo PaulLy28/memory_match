@@ -17,8 +17,8 @@ $(document).ready(function(){
         if(clicked == true){
             $(this).hide();
             if (firstCardClicked === null) {
-                /*firstCardClicked is being assigned the card that is being clicked which will be an image with class of ".back". prev() will go to the previous sibling which in this case will be the image with the class ".front" (don't think first will be needed.)*/
-                firstCardClicked = $(this).prev().first().attr("src");
+                /*firstCardClicked is being assigned the card that is being clicked which will be an image with class of ".back". prev() will go to the previous sibling which in this case will be the image with the class ".front" (don't think .first() will be needed after prev() so I will remove it.)*/
+                firstCardClicked = $(this).prev().attr("src");
                 /*firstCardClicked = $(this).find(".front").find("img").attr("src");*/
                 console.log("first card clicked", firstCardClicked);
                 //stores the value of the first clicked card
@@ -26,7 +26,7 @@ $(document).ready(function(){
             }
             else {
                 clicked = false;
-                secondCardClicked = $(this).prev().first().attr("src");
+                secondCardClicked = $(this).prev().attr("src");
               /*  secondCardClicked = $(this).find(".front").find("img").attr("src");*/
                 console.log("this is card 2", secondCardClicked);
                 secondCardStored = $(this);
@@ -50,7 +50,7 @@ $(document).ready(function(){
                 //this sets the time before the third image can be clicked
                 setTimeout(function(){
                     clicked = true;
-                },500);
+                },2000);
             }
         }
     });
