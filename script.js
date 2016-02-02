@@ -4,8 +4,9 @@ var secondCardClicked = null;
 var firstCardStored = null;
 var secondCardStored = null;
 var matchCounter = 0;
-var totalMatches = 2;
+var totalMatches = 9;
 var clicked = true;
+var attempts = 0;
 /*onload handler and click function.  included addClass to all backs to help distinguish which cards have not been flipped*/
 $(document).ready(function(){
     $(".back").addClass("notFlipped");
@@ -58,10 +59,14 @@ function compare(firstCardClicked,secondCardClicked){
         $(secondCardStored).removeClass("notFlipped");
         //this will increment the global variable by 1 everytime there is a match
         matchCounter++;
+        attempts++;
+        displayAttempts();
         console.log("Match Counter:", matchCounter);
     }
     else {
         console.log("no match");
+        attempts++;
+        displayAttempts();
         //if no there are no matches then the cards with the class ".notflipped will still be in play
         $('.notFlipped').show();
     }
@@ -75,6 +80,10 @@ function winner(){
             });
     $("body").append(winMessage);
   // }
+}
+
+function displayAttempts(){
+    $(".attempts .value").text(attempts);
 }
 
 
