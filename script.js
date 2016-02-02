@@ -34,11 +34,12 @@ $(document).ready(function(){
                 console.log(firstCardStored, secondCardStored);
                 //this will display the winning message
                 if (matchCounter == totalMatches){
-                    var winMessage = $("<div>",{
+                    winner();
+                  /*  var winMessage = $("<div>",{
                         id: "victory",
                         text: "winner winner chicken dinner!"
                     });
-                    $("body").append(winMessage);
+                    $("body").append(winMessage);*/
                 }
                 //this sets the time before the third image can be clicked
                 setTimeout(function(){
@@ -65,16 +66,15 @@ function compare(firstCardClicked,secondCardClicked){
         $('.notFlipped').show();
     }
 }
-
-/*
+//winner message function
 function winner(){
-    if (matchCounter == totalMatches){
+   // if (matchCounter == totalMatches){
         var winMessage = $("<div>",{
             id: "victory",
             text: "WINNER WINNER CHICKEN DINNER!"
             });
     $("body").append(winMessage);
-    }
-}*/
+  // }
+}
 
 
