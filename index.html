@@ -3,41 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <title>Memory Match v1.0</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--<link href='https://fonts.googleapis.com/css?family=Palanquin|Marcellus' rel='stylesheet' type='text/css'>-->
+    <link href='https://fonts.googleapis.com/css?family=Oswald:400,300' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="style.css"/>
     <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
     <script src="script.js"></script>
-    <link rel="stylesheet" type="text/css" href="style.css"/>
 
 </head>
 <body>
 <div class="container">
     <!--Game Header-->
-    <div id="header">
-        <h1>Jitz Memory Match </h1>
-        <ul id="gameMenu">
-            <li><a href="#">Settings</a></li>
-            <li><a href="about.html">About</a></li>
-        </ul>
-        <img id="logo" src ="images/enjoyJiuJitsu1.jpg">
+    <div class="headerContainer">
+        <div id="header">
+            <h1>Memory Match </h1>
+                <ul id="gameMenu">
+                    <li><a href="#">Settings</a></li>
+                    <li><a href="about.html">About</a></li>
+                </ul>
+                <img id="logo" src ="images/enjoyJiuJitsu1.jpg">
+        </div>
     </div>
     <!--Stats section-->
     <div id="gameInfo">
-        <div class="games-played">
-            <p class="label">Games Played</p>
-            <p class="value"></p>
-        </div>
+        <ul class="games-played">
+            <li class="label">Games Played</li>
+            <li class="value"></li>
+        </ul>
 
-        <div class="attempts">
-            <p class="label">Attempts</p>
-            <p class="value"></p>
-        </div>
+        <ul class="attempts">
+            <li class="label">Attempts</li>
+            <li class="value"></li>
+        </ul>
 
-        <div class="accuracy">
-            <p class="label">Accuracy</p>
-            <p class="value"></p>
-        </div>
+        <ul class="accuracy">
+            <li class="label">Accuracy</li>
+            <li class="value"></li>
+        </ul>
 
-        <button class="reset" type="button">Reset Game</button>
+        <button class="reset">Reset Game</button>
     </div>
 </div>
 <!--Game section-->

@@ -1,13 +1,10 @@
-/**
- * Created by Paul on 2/1/2016.
- */
 //global variables
 var firstCardClicked = null;
 var secondCardClicked = null;
 var firstCardStored = null;
 var secondCardStored = null;
 var matchCounter = 0;
-var totalMatches = 2;
+var totalMatches = 9;
 var clicked = true;
 /*onload handler and click function.  included addClass to all backs to help distinguish which cards have not been flipped*/
 $(document).ready(function(){
