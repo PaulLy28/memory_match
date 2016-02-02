@@ -19,6 +19,7 @@ $(document).ready(function(){
             if (firstCardClicked === null) {
                 /*firstCardClicked is being assigned the card that is being clicked which will be an image with class of ".back". prev() will go to the previous sibling which in this case will be the image with the class ".front" (don't think first will be needed.)*/
                 firstCardClicked = $(this).prev().first().attr("src");
+                /*firstCardClicked = $(this).find(".front").find("img").attr("src");*/
                 console.log("first card clicked", firstCardClicked);
                 //stores the value of the first clicked card
                 firstCardStored = $(this);
@@ -26,6 +27,7 @@ $(document).ready(function(){
             else {
                 clicked = false;
                 secondCardClicked = $(this).prev().first().attr("src");
+              /*  secondCardClicked = $(this).find(".front").find("img").attr("src");*/
                 console.log("this is card 2", secondCardClicked);
                 secondCardStored = $(this);
                 //call the compare function defined below
@@ -38,7 +40,7 @@ $(document).ready(function(){
                 console.log(firstCardStored, secondCardStored);
                 //this will display the winning message
                 if (matchCounter == totalMatches){
-                    $("#victory").fadeIn();
+                    $("#winner").fadeIn();
                   /*  var winMessage = $("<div>",{
                         id: "victory",
                         text: "winner winner chicken dinner!"
@@ -57,13 +59,13 @@ $(document).ready(function(){
         console.log("game has been reset");
     })
 });
-/*this is the compare function that will be used to compare the two clicked cards.  if the cards equal the function will remove the assigned class of "notFlipped" so that only the cards without this class will remained flipped. (could possibly just remove the class back and not had to even add a class of notFlipped)*/
+/*this is the compare function that will be used to compare the two clicked cards.  if the cards equal, the function will remove the assigned class of "notFlipped" so that only the cards without this class will remained flipped. (could possibly just remove the class back and not had to even add a class of notFlipped)*/
 function compare(firstCardClicked,secondCardClicked){
     if (firstCardClicked == secondCardClicked) {
         console.log("match");
         $(firstCardStored).removeClass("notFlipped");
         $(secondCardStored).removeClass("notFlipped");
-        //this will increment the global variable by 1 everytime there is a match
+        /*this will increment the matchCounter by 1 every time there is a match, attempts will be incremented by one as well. call 3 functions to display the attempts, accuracy, and gamesplayed.*/
         matchCounter++;
         attempts++;
         displayAttempts();
@@ -73,11 +75,12 @@ function compare(firstCardClicked,secondCardClicked){
     }
     else {
         console.log("no match");
+        /*this will increment the attempts and display the attempts, accuracy, and gamesplayed.*/
         attempts++;
         displayAttempts();
         displayAccuracy();
         displayGamesPlayed();
-        //if no there are no matches then the cards with the class ".notflipped will still be in play
+        /*if no there are no matches then the cards with the class ".notflipped will still be in play*/
         $('.notFlipped').show();
     }
 }
@@ -106,7 +109,7 @@ function displayAccuracy(){
             return 0;
         }
         else{
-            return parseInt((matchCounter/attempts)*100) + "%";
+            return Math.round((matchCounter/attempts)*100) + "%";
         }
     });
 }
@@ -135,8 +138,6 @@ function reset_stats(){
     displayStats();
 }
 
-
-
 //this will reset the game
 function resetButton(){
     console.log("game reset")
@@ -144,5 +145,5 @@ function resetButton(){
     reset_stats();
     displayStats();
     $(".back").show();
-    $("#victory").fadeOut();
+    $("#winner").fadeOut();
 }
