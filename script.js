@@ -35,11 +35,11 @@ $(document).ready(function(){
                 //this will display the winning message
                 if (matchCounter == totalMatches){
                     winner();
-                    /*  var winMessage = $("<div>",{
-                     id: "victory",
-                     text: "winner winner chicken dinner!"
-                     });
-                     $("body").append(winMessage);*/
+                  /*  var winMessage = $("<div>",{
+                        id: "victory",
+                        text: "winner winner chicken dinner!"
+                    });
+                    $("body").append(winMessage);*/
                 }
                 //this sets the time before the third image can be clicked
                 setTimeout(function(){
@@ -56,7 +56,7 @@ function compare(firstCardClicked,secondCardClicked){
         console.log("match");
         $(firstCardStored).removeClass("notFlipped");
         $(secondCardStored).removeClass("notFlipped");
-        //this will increment the global variable by 1 every time there is a match
+        //this will increment the global variable by 1 everytime there is a match
         matchCounter++;
         console.log("Match Counter:", matchCounter);
     }
@@ -68,13 +68,13 @@ function compare(firstCardClicked,secondCardClicked){
 }
 //winner message function
 function winner(){
-    // if (matchCounter == totalMatches){
-    var winMessage = $("<div>",{
-        id: "victory",
-        text: "WINNER WINNER CHICKEN DINNER!"
-    });
+   // if (matchCounter == totalMatches){
+        var winMessage = $("<div>",{
+            id: "victory",
+            text: "WINNER WINNER CHICKEN DINNER!"
+            });
     $("body").append(winMessage);
-    // }
+  // }
 }
 
 
