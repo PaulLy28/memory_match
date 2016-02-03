@@ -81,7 +81,9 @@ function compare(firstCardClicked,secondCardClicked){
         displayAccuracy();
         displayGamesPlayed();
         /*if no there are no matches then the cards with the class ".notflipped will still be in play*/
-        $('.notFlipped').show();
+        setTimeout(function () {
+            $('.notFlipped').show();
+        }, 1000);
     }
 }
 //winner message function
