@@ -60,6 +60,7 @@ $(document).ready(function(){
     })
 });
 /*this is the compare function that will be used to compare the two clicked cards.  if the cards equal, the function will remove the assigned class of "notFlipped" so that only the cards without this class will remained flipped. (could possibly just remove the class back and not had to even add a class of notFlipped)*/
+//dan start
 function compare(firstCardClicked,secondCardClicked){
     if (firstCardClicked == secondCardClicked) {
         console.log("match");
@@ -68,24 +69,21 @@ function compare(firstCardClicked,secondCardClicked){
         /*this will increment the matchCounter by 1 every time there is a match, attempts will be incremented by one as well. call 3 functions to display the attempts, accuracy, and gamesplayed.*/
         matchCounter++;
         attempts++;
-        displayAttempts();
-        displayAccuracy();
-        displayGamesPlayed();
+        displayStats();
         console.log("Match Counter:", matchCounter);
     }
     else {
         console.log("no match");
         /*this will increment the attempts and display the attempts, accuracy, and gamesplayed.*/
         attempts++;
-        displayAttempts();
-        displayAccuracy();
-        displayGamesPlayed();
+        displayStats();
         /*if no there are no matches then the cards with the class ".notflipped will still be in play*/
         setTimeout(function () {
             $('.notFlipped').show();
         }, 1000);
     }
 }
+//dan end
 //winner message function
 /*function winner(){
    // if (matchCounter == totalMatches){
