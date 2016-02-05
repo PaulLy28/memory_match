@@ -62,45 +62,45 @@ $(document).ready(function(){
 /*this is the compare function that will be used to compare the two clicked cards.  if the cards equal, the function will remove the assigned class of "notFlipped" so that only the cards without this class will remained flipped. (could possibly just remove the class back and not had to even add a class of notFlipped)*/
 //dan start
 //this is a function that will compare the first card clicked and the second card clicked
-function compare(firstCardClicked,secondCardClicked){
+
 //this is a statement comparing the first card clicked to the second card clicked if they ar equal in value.
-    if (firstCardClicked == secondCardClicked) {
+
 //this will console out the string match if statement above is true (if first card clicked is equal to second card clicked)
-        console.log("match");
+
 //when the if statement is true meaning if first card clicked is equal to the second card clicked the class associated with the first and second card will be removed from those matched cards this will keep the cards that still have the class of notFlipped remain not flipped over.
         //first card stored stores the first card clicked. when the if statement is true the class of notFlipped will be removed
-        $(firstCardStored).removeClass("notFlipped");
+
         //second card stored stores the second card clicked. when the if statement is true the class of notFlipped will be removed
-        $(secondCardStored).removeClass("notFlipped");
+
         //this will increment the matchCounter by 1 every time there is a match
-        matchCounter++;
+
         //this will increment the attempts made to match the cards by one
-        attempts++;
+
         //this will display the stats of the attempts made, the accuracy, and the amount of games played
-        displayStats();
+
         //this will display the how many matches have been achieved in the game so far in the game.
-        console.log("Match Counter:", matchCounter);
+
     //this ends the if statement
-    }
+
 //if the statement above is not true which means if first card clicked does not equal second card clicked this section will run
-    else {
+
     //if the first card clicked does not equal the second card clicked the console will show a message of no match
-        console.log("no match");
+
         //this will increment the attempts made to match the cards by one
-        attempts++;
+
         //this will display the stats of the attempts made, the accuracy, and the amount of games played
-        displayStats();
+
 //if there are no matches then the cards with the class notFlipped will still be in play
         //this is a function that will determine how long the card stays flipped
-        setTimeout(function () {
+
         //this will target the cards that have the class of not flipped to show the back of the card (back of the card means the card have not been matched)
-            $('.notFlipped').show();
+
         //this will have the card stay flipped showing the front image for 1000 milliseconds (1 second) before flipping the card back to show the back of the card.
-        }, 1000);
+
     //this ends the else statement
-    }
+
 //this ends the function
-}
+
 //dan end
 //winner message function
 /*function winner(){
