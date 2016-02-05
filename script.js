@@ -78,7 +78,9 @@ function compare(firstCardClicked,secondCardClicked){
         attempts++;
         //this will display the stats of the attempts made, the accuracy, and the amount of games played
         displayStats();
+        //this will display the how many matches have been achieved in the game so far in the game.
         console.log("Match Counter:", matchCounter);
+    //this ends the if statement
     }
 //if the statement above is not true which means if first card clicked does not equal second card clicked this section will run
     else {
@@ -95,7 +97,9 @@ function compare(firstCardClicked,secondCardClicked){
             $('.notFlipped').show();
         //this will have the card stay flipped showing the front image for 1000 milliseconds (1 second) before flipping the card back to show the back of the card.
         }, 1000);
+    //this ends the else statement
     }
+//this ends the function
 }
 //dan end
 //winner message function
