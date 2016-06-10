@@ -30,7 +30,7 @@ function Card(id, img, row, col, base, back, gameScope){
 
     //hide toggles between cards and remove cards if match
     this.flipBack = function(){
-        $(cardScope.backCard).toggleClass("flip");
+        $(cardScope.card).toggleClass("flip");
         /*$(cardScope.backCard).toggle();*/
     };
 

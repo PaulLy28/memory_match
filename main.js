@@ -165,7 +165,6 @@ function GameLogic(gameManager){
 
     };
 
-
     logicScope.flipTopCard = function(id){
         var r = logicScope.cardObjects[id].rowNum;
         var c = logicScope.cardObjects[id].colNum;
@@ -185,3 +184,55 @@ function GameLogic(gameManager){
     });
 
 }//close the memory match function
+/*
+
+//this function will update the attempts
+function displayAttempts(){
+    $(".attempts .value").text(attempts);
+}
+//this function will update the accuracy
+function displayAccuracy(){
+    $(".accuracy .value").text(function(){
+        if (attempts == 0){
+            return 0;
+        }
+        else{
+            return Math.round((matchCounter/attempts)*100) + "%";
+        }
+    });
+}
+//this function will update games played
+function displayGamesPlayed(){
+    $(".games-played .value").text(games_played);
+}
+
+//display stats
+/!*function displayStats(){
+ $(".games-played .value").text(games_played);
+ $(".attempts .value").text(attempts);
+ $(".accuracy .value").text(accuracy + "%");
+ }*!/
+
+function displayStats(){
+    displayAttempts();
+    displayAccuracy();
+    displayGamesPlayed();
+}
+
+function reset_stats(){
+    attempts = 0;
+    accuracy = 0;
+    matchCounter = 0;
+    displayStats();
+}
+
+//this will reset the game
+function resetButton(){
+    console.log("game reset")
+    games_played++;
+    reset_stats();
+    displayStats();
+    $(".back").show();
+    $("#winner").fadeOut();
+}
+*/

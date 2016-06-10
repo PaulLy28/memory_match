@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title>Jitz Match</title>
     <!--<link href='https://fonts.googleapis.com/css?family=Palanquin|Marcellus' rel='stylesheet' type='text/css'>-->
+    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Oswald:400,300' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" type="text/css" href="style.css"/>
     <!--<script   src="https://code.jquery.com/jquery-2.2.3.js" integrity="sha256-laXWtGydpwqJ8JA+X9x2miwmaiKhn8tVmOVEigRNtP4=" crossorigin="anonymous"></script>-->
@@ -15,10 +16,10 @@
 <!--Game Header-->
     <div class="headerContainer">
         <div id="header">
-            <h1>Memory Match </h1>
+            <h1>Jitz Match </h1>
             <ul id="gameMenu">
-                <li><a href="#">Settings</a></li>
-                <li><a href="about.html">About</a></li>
+                <li id="settings"><a href="#">Settings</a></li>
+                <li id="about"><a href="about.html">About</a></li>
             </ul>
             <img id="logo" src ="images/enjoyJiuJitsu1.jpg">
         </div>
@@ -48,11 +49,13 @@
 </div>
 <!--Game section-->
     <div id="game-area">
-        <!--<div id="winner">you win! oooossssss!!!</div>-->
+        <div id="winner">you win! oooossssss!!!</div>
     </div>
 </div>
 </body>
 <script src="main.js"></script>
 <script src="card.js"></script>
 <script src="manager.js"></script>
+<!--checking display-->
+<script src="script.js"></script>
 </html>

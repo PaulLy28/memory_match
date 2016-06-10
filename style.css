@@ -1,5 +1,5 @@
 body {
-    background-image: url("images/wallpaper4.jpeg");
+    background-image: url("images/wallpaper1.jpeg");
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -14,6 +14,7 @@ body {
 }
 
 #header {
+    box-sizing: border-box;
     height: 15vh;
     position: relative;
     margin-bottom: 5%;
@@ -21,8 +22,8 @@ body {
 /*the "Memory Match" text*/
 h1 {
     text-align: center;
-    font-size: 5.5vw;
-    font-family: "Comic Sans MS";
+    font-size: 5vw;
+    font-family: "Arial Black";
     position: absolute;
     left: 33%;
     transform: translate(0, -50%);
@@ -44,7 +45,7 @@ h1 {
     top: 5px;
     right: 30px;
     border: 2px solid black;
-    border-radius: 50%;
+    /*border-radius: 50%;*/
 }
 #gameMenu {
     float: right;
@@ -59,30 +60,34 @@ h1 {
     position: relative;
     float: left;
     margin-right: 5px;
-    font-family: "Comic Sans MS";
+    font-family: "Arial Black";
 }
 /*the text portion section for the links*/
-a {
-    color: orangered;
+#settings a, #about a {
+    color: #de241b;
     text-decoration: none;
     -webkit-text-stroke-width: 1px;
     -webkit-text-stroke-color: black;
-    margin-right: 1.5em;
+    transform: translate(-800%, 10%);
+    /*    margin-right: .8em;*/
     position: static;
     display: inline-block;
-    *margin-right: 25px;
-    margin-bottom: 5px;
+/*    *margin-right: 25px;
+    margin-bottom: 5px;*/
 }
 
 /*Game Info section*/
 #gameInfo {
-    *border: 1px solid black;
+    /*border: 1px solid black;*/
     float: left;
     width: 9em;
     position: relative;
     height: 40vh;
-    border-radius: 15px;
-    display: inline-block;
+    /*border-radius: 15px;*/
+    /*display: inline-block;*/
+    left: 200px;
+    color: #de241b;
+    font-weight: bold;
 
 }
 
@@ -113,40 +118,42 @@ div > ul {
 
 
 .circle {
-    border-radius: 50vw;
+    /*border-radius: 50vw;*/
 }
 
 .games-played {
-    width: 6vw;
-    height: 9vh;
+    width: 6em;
+    height: 3.5em;
+  /*  width: 6vw;
+    height: 9vh;*/
     background-color: white;
-    border: 2px solid black;
+    border: 1px solid black;
 }
 
 .attempts {
-    width: 6vw;
-    height: 9vh;
+    width: 6em;
+    height: 3.5em;
     background-color: white;
-    border: 2px solid black;
+    border: 1px solid black;
     top: 10px
 }
 
 .accuracy {
-    width: 6vw;
-    height: 9vh;
+    width: 6em;
+    height: 3.5em;
     background-color: white;
-    border: 2px solid black;
+    border: 1px solid black;
 }
 
 .reset {
     position: absolute;
     top: 0;
-    background-color: white;
+   /* background-color: white;*/
     padding: .5em .5em;
     font-family: "Oswald", sans-serif;
     width: 8.5vw;
     height: 8vh;
-    border: 2px solid black;
+   /* border: 2px solid black;*/
     font-size: 1vw;
     font-weight: bold;
 }
@@ -156,7 +163,7 @@ button:focus {
 }
 /*Game Section*/
 #game-area {
-    margin: 0 5%;
+    margin: 0 10px;
     border: 1px solid black;
     border-radius: 15px;
     display: inline-block;
@@ -165,6 +172,8 @@ button:focus {
     flex-flow: row wrap;
     height: 70vh;
     width: 50vw;
+    transform: translateX(30%);
+    /*opacity: .5;*/
 }
 
 .card {
@@ -172,6 +181,9 @@ button:focus {
     border: 1px solid black;
     left: 0;
     top: 0;
+    perspective: 1000px;
+    transition: 0.6s;
+    transform-style: preserve-3d;
 }
 
 #winner {
@@ -204,12 +216,23 @@ body{
     box-sizing: border-box;
 }
 
-.front{
-    position: absolute;
+.front, .back {
+    backface-visibility: hidden;
 
+    position: absolute;
+    top: 0;
+    left: 5px;
+}
+
+.front{
+   /* position: absolute;*/
+    transform: rotateY(180deg);
 }
 .back{
     position: absolute;
+    z-index: 2;
+    /* for firefox 31 */
+    transform: rotateY(0deg);
 }
 .front img, .back img{
     width:100%;
@@ -220,8 +243,12 @@ body{
     border: 1px solid black;
 
 }
-
+/*
 .flip {
     transition-duration: .5s;
     transform: rotateY(90deg);
+}*/
+
+.flip{
+    transform: rotateY(180deg)
 }
