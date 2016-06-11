@@ -11,6 +11,17 @@ body {
 
 .headContainer {
     width: 80%;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.stats-container {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 #header {
@@ -43,13 +54,13 @@ h1 {
     width: 10vw;
     height: 10vh;
     top: 5px;
-    right: 30px;
+    left: 40px;
     border: 2px solid black;
     /*border-radius: 50%;*/
 }
-#gameMenu {
+/*#gameMenu {
     float: right;
-}
+}*/
 /*the link position*/
 #gameMenu li {
     list-style: none;
@@ -68,7 +79,7 @@ h1 {
     text-decoration: none;
     -webkit-text-stroke-width: 1px;
     -webkit-text-stroke-color: black;
-    transform: translate(-800%, 10%);
+    transform: translate(0%, 80%);
     /*    margin-right: .8em;*/
     position: static;
     display: inline-block;
@@ -122,8 +133,8 @@ div > ul {
 }
 
 .games-played {
-    width: 6em;
-    height: 3.5em;
+    width: 6vw;
+    height: 7vh;
   /*  width: 6vw;
     height: 9vh;*/
     background-color: white;
@@ -131,16 +142,18 @@ div > ul {
 }
 
 .attempts {
-    width: 6em;
-    height: 3.5em;
+    width: 6vw;
+    height: 7vh;
     background-color: white;
     border: 1px solid black;
     top: 10px
 }
 
 .accuracy {
-    width: 6em;
-    height: 3.5em;
+    width: 6vw;
+    height: 7vh;
+/*    width: 6em;
+    height: 3.5em;*/
     background-color: white;
     border: 1px solid black;
 }
@@ -151,8 +164,8 @@ div > ul {
    /* background-color: white;*/
     padding: .5em .5em;
     font-family: "Oswald", sans-serif;
-    width: 8.5vw;
-    height: 8vh;
+    width: 8.20vw;
+    height: 7vh;
    /* border: 2px solid black;*/
     font-size: 1vw;
     font-weight: bold;
@@ -171,9 +184,16 @@ button:focus {
     display: flex;
     flex-flow: row wrap;
     height: 70vh;
-    width: 50vw;
+    width: 55vw;
     transform: translateX(30%);
     /*opacity: .5;*/
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-perspective: 1000px;
+    -moz-perspective: 1000px;
+    -ms-perspective: 1000px;
+    perspective: 1000px;
 }
 
 .card {
@@ -182,7 +202,14 @@ button:focus {
     left: 0;
     top: 0;
     perspective: 1000px;
+    -webkit-transition-duration: 0.6s;
+    -moz-transition-duration:  0.6s;
+    -ms-transition-duration:  0.6s;
+    -o-transition-duration:  0.6s;
     transition: 0.6s;
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    -ms-transform-style: preserve-3d;
     transform-style: preserve-3d;
 }
 
@@ -218,10 +245,9 @@ body{
 
 .front, .back {
     backface-visibility: hidden;
-
     position: absolute;
     top: 0;
-    left: 5px;
+    left: 8px;
 }
 
 .front{

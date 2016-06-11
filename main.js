@@ -223,7 +223,7 @@ function GameLogic(gameManager){
 
 
     $( window ).resize(function() {
-        game.boardAdjust();
+        logicScope.boardAdjust();
     });
 
 }//close the game logic memory match function
