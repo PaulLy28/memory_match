@@ -164,7 +164,7 @@ button:focus {
 /*Game Section*/
 #game-area {
     margin: 0 10px;
-    border: 1px solid black;
+    /*border: 1px solid black;*/
     border-radius: 15px;
     display: inline-block;
     position: relative;
@@ -178,7 +178,7 @@ button:focus {
 
 .card {
     position: relative;
-    border: 1px solid black;
+    /*border: 1px solid black;*/
     left: 0;
     top: 0;
     perspective: 1000px;
@@ -240,7 +240,7 @@ body{
 }
 .gridSquare{
     position: relative;
-    border: 1px solid black;
+    /*border: 1px solid black;*/
 
 }
 /*

@@ -164,8 +164,7 @@ function GameLogic(gameManager){
                 second.flipBack();
                 attempts++;
             }
-            logicScope.displayAttempts();
-            logicScope.displayAccuracy();
+            logicScope.displayStats();
             first = null;
             second = null;
         }, 1500);
@@ -200,7 +199,9 @@ function GameLogic(gameManager){
     logicScope.reset_stats = function(){
         attempts = 0;
         accuracy = 0;
+        games_played++;
         /*matchCounter = 0;*/
+        logicScope.board = [];
         logicScope.displayStats();
     };
 
@@ -225,29 +226,7 @@ function GameLogic(gameManager){
         game.boardAdjust();
     });
 
-    $(document).ready(function(){
-
-
-        $(".reset").click(function(){
-
-            var cardimages =  [ 'armbar4.jpg','tap.jpg','chess.jpg','kimura1.jpg','rearNakedChoke.jpg','sweep.jpg', 'tap2.jpg', 'triangle1.jpg', 'triangleArmbar2.jpg'];
-            var cardback = 'yoda3.jpg';
-            var baseUrl = 'images/';
-            var cols = 4;
-            var game = new MemoryMatch(cols, cardimages, cardback, baseUrl);
-
-
-            console.log("reset clicked");
-            $("#game-area").html("");
-            logicScope.config(cols, images, back, base);
-
-        });
-    });
-
-
 }//close the game logic memory match function
-
-
 
 
 
