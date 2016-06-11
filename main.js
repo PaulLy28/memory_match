@@ -2,6 +2,9 @@
 function GameLogic(gameManager){
     var gameScope = gameManager;
     var logicScope = this;
+    var attempts = 0;
+    var accuracy = 0;
+    var games_played = 0;
     logicScope.cardImageBaseUrl = "";
     logicScope.cardBackUrl = "";
     logicScope.title =  "MemMatch";
@@ -46,7 +49,7 @@ function GameLogic(gameManager){
 
     logicScope.boardCreate = function(r){
         var imgArr = [];
-        var colSize = 6 //logicScope.colCheck(r);
+        var colSize = 6; //logicScope.colCheck(r);
         console.log(colSize);
         var row = [];
         var rowNum = 0;
@@ -148,24 +151,63 @@ function GameLogic(gameManager){
         second = logicScope.cardObjects[id];
         second.flipBack();
 
-        setTimeout(function(){
+        setTimeout(function() {
             if (first.imgsrc === second.imgsrc) {
                 // toggle function
                 first.card.addClass("matched").hide();
                 second.card.addClass("matched").hide();
+                attempts++;
                 if((".matched").length == 2) logicScope.config(game.config(5, cardimages, cardback, baseUrl));
             }
             else {
                 first.flipBack();
                 second.flipBack();
+                attempts++;
             }
+            logicScope.displayAttempts();
+            logicScope.displayAccuracy();
             first = null;
             second = null;
         }, 1500);
 
     };
 
-    logicScope.flipTopCard = function(id){
+    logicScope.displayAttempts = function() {
+        $(".attempts .value").text(attempts);
+    };
+
+    logicScope.displayAccuracy = function() {
+        $(".accuracy .value").text(function() {
+            if (attempts == 0){
+                return 0;
+            }
+            else{
+                return Math.round((($('.matched').length/2)/attempts)*100) + "%";
+            }
+        });
+    };
+
+    logicScope.displayGamesPlayed = function() {
+        $(".games-played .value").text(games_played);
+    };
+
+    logicScope.displayStats = function(){
+        logicScope.displayAttempts();
+        logicScope.displayAccuracy();
+        logicScope.displayGamesPlayed();
+    };
+
+    logicScope.reset_stats = function(){
+        attempts = 0;
+        accuracy = 0;
+        /*matchCounter = 0;*/
+        logicScope.displayStats();
+    };
+
+
+
+
+    logicScope.flipTopCard = function(id) {
         var r = logicScope.cardObjects[id].rowNum;
         var c = logicScope.cardObjects[id].colNum;
 
@@ -183,56 +225,31 @@ function GameLogic(gameManager){
         game.boardAdjust();
     });
 
-}//close the memory match function
-/*
+    $(document).ready(function(){
 
-//this function will update the attempts
-function displayAttempts(){
-    $(".attempts .value").text(attempts);
-}
-//this function will update the accuracy
-function displayAccuracy(){
-    $(".accuracy .value").text(function(){
-        if (attempts == 0){
-            return 0;
-        }
-        else{
-            return Math.round((matchCounter/attempts)*100) + "%";
-        }
+
+        $(".reset").click(function(){
+
+            var cardimages =  [ 'armbar4.jpg','tap.jpg','chess.jpg','kimura1.jpg','rearNakedChoke.jpg','sweep.jpg', 'tap2.jpg', 'triangle1.jpg', 'triangleArmbar2.jpg'];
+            var cardback = 'yoda3.jpg';
+            var baseUrl = 'images/';
+            var cols = 4;
+            var game = new MemoryMatch(cols, cardimages, cardback, baseUrl);
+
+
+            console.log("reset clicked");
+            $("#game-area").html("");
+            logicScope.config(cols, images, back, base);
+
+        });
     });
-}
-//this function will update games played
-function displayGamesPlayed(){
-    $(".games-played .value").text(games_played);
-}
 
-//display stats
-/!*function displayStats(){
- $(".games-played .value").text(games_played);
- $(".attempts .value").text(attempts);
- $(".accuracy .value").text(accuracy + "%");
- }*!/
 
-function displayStats(){
-    displayAttempts();
-    displayAccuracy();
-    displayGamesPlayed();
-}
+}//close the game logic memory match function
 
-function reset_stats(){
-    attempts = 0;
-    accuracy = 0;
-    matchCounter = 0;
-    displayStats();
-}
 
-//this will reset the game
-function resetButton(){
-    console.log("game reset")
-    games_played++;
-    reset_stats();
-    displayStats();
-    $(".back").show();
-    $("#winner").fadeOut();
-}
-*/
+
+
+
+
+
