@@ -38,12 +38,6 @@ h1 {
     position: absolute;
     left: 33%;
     transform: translate(0, -50%);
-   /* text-shadow:
-            3px 3px 0 #000,
-            -1px -1px 0 #000,
-            1px -1px 0 #000,
-            -1px 1px 0 #000,
-            1px 1px 0 #000;*/
     -webkit-text-fill-color: #de241b; /* Will override color (regardless of order) */
     -webkit-text-stroke-width: 5px;
     -webkit-text-stroke-color: black;
@@ -195,18 +189,18 @@ button:focus {
 }
 
 #winner {
-    background-color:white;
-    border-radius: 50%;
+    height: auto;
     padding: 20px;
     position: absolute;
-    top: 50%;
+    top: 45%;
     left: 50%;
     transform: translate(-50%, -50%);
     color: #de241b;
     font-family: Oswald, sans-serif;
     font-weight: bold;
     text-transform: uppercase;
-    font-size: 5em;
+    font-size: 5vw;
+    text-align: center;
     display: none;
 }
 

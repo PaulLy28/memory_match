@@ -157,7 +157,8 @@ function GameLogic(gameManager){
                 first.card.addClass("matched").hide();
                 second.card.addClass("matched").hide();
                 attempts++;
-                if((".matched").length == 2) logicScope.config(logicScope.config(5, cardimages, cardback, baseUrl));
+                if($(".matched").length == 2){ logicScope.win() };
+                /*if((".matched").length == 2) logicScope.config(game.config(5, cardimages, cardback, baseUrl));*/
             }
             else {
                 first.flipBack();
@@ -205,7 +206,14 @@ function GameLogic(gameManager){
         logicScope.displayStats();
     };
 
-
+    logicScope.win = function() {
+        logicScope.winCondition = $("<div>", {
+            text: "you win! oooossssss!!!",
+            id: "winner"
+        });
+        $("#game-area").append(logicScope.winCondition);
+        $("#winner").fadeIn();
+    };
 
 
     logicScope.flipTopCard = function(id) {

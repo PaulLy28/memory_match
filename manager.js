@@ -29,14 +29,3 @@ $(document).ready(function(){
     });
 });
 
-
-
-
-
-
-
-/*var cardimages =  [ 'armbar4.jpg','tap.jpg','chess.jpg','kimura1.jpg','rearNakedChoke.jpg','sweep.jpg', 'tap2.jpg', 'triangle1.jpg', 'triangleArmbar2.jpg'];
-var cardback = 'yoda3.jpg';
-var baseUrl = 'images/';
-var cols = 4;
-var game = new MemoryMatch(cols, cardimages, cardback, baseUrl);*/
