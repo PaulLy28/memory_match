@@ -157,7 +157,7 @@ function GameLogic(gameManager){
                 first.card.addClass("matched").hide();
                 second.card.addClass("matched").hide();
                 attempts++;
-                if((".matched").length == 2) logicScope.config(game.config(5, cardimages, cardback, baseUrl));
+                if((".matched").length == 2) logicScope.config(logicScope.config(5, cardimages, cardback, baseUrl));
             }
             else {
                 first.flipBack();
