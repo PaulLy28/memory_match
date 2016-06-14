@@ -30,7 +30,7 @@ body {
     position: relative;
     margin-bottom: 5%;
 }
-/*the "Memory Match" text*/
+/*the "Jitz Match" text*/
 h1 {
     text-align: center;
     font-size: 5vw;
@@ -44,7 +44,7 @@ h1 {
             1px -1px 0 #000,
             -1px 1px 0 #000,
             1px 1px 0 #000;*/
-    -webkit-text-fill-color: white; /* Will override color (regardless of order) */
+    -webkit-text-fill-color: #de241b; /* Will override color (regardless of order) */
     -webkit-text-stroke-width: 5px;
     -webkit-text-stroke-color: black;
 }
@@ -146,6 +146,7 @@ div > ul {
     position: absolute;
     top: 0;
     background-color: white;
+    color: #de241b;
     padding: .5em .5em;
     font-family: "Oswald", sans-serif;
     width: 8.20vw;
@@ -201,7 +202,7 @@ button:focus {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    color: orangered;
+    color: #de241b;
     font-family: Oswald, sans-serif;
     font-weight: bold;
     text-transform: uppercase;
@@ -214,7 +215,8 @@ p {
     font-family: Oswald, sans-serif;
     font-weight: bold;
     font-size: 2vw;
-    -webkit-text-fill-color: orangered; /* Will override color (regardless of order) */
+    text-align: center;
+    -webkit-text-fill-color: black; /* Will override color (regardless of order) */
     -webkit-text-stroke-width: 1px;
     -webkit-text-stroke-color: black;
 }
