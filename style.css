@@ -78,7 +78,7 @@ h1 {
     -webkit-text-stroke-width: 1px;
     -webkit-text-stroke-color: black;
     font-size: 1vw;
-    transform: translate(95%, 80%);
+    transform: translate(80%, 180%);
     /*transform: translate(0%, 80%);*/
     display: inline-block;
 }
