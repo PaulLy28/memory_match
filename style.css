@@ -56,11 +56,9 @@ h1 {
     top: 5px;
     left: 40px;
     border: 2px solid black;
-    /*border-radius: 50%;*/
+
 }
-/*#gameMenu {
-    float: right;
-}*/
+
 /*the link position*/
 #gameMenu li {
     list-style: none;
@@ -73,29 +71,24 @@ h1 {
     margin-right: 5px;
     font-family: "Arial Black";
 }
-/*the text portion section for the links*/
-#settings a, #about a {
+/*the text portion section for the links #settings a not made yet*/
+#about a {
     color: #de241b;
     text-decoration: none;
     -webkit-text-stroke-width: 1px;
     -webkit-text-stroke-color: black;
-    transform: translate(0%, 80%);
-    /*    margin-right: .8em;*/
+    transform: translate(100%, 80%);
+    /*transform: translate(0%, 80%);*/
     position: static;
     display: inline-block;
-/*    *margin-right: 25px;
-    margin-bottom: 5px;*/
 }
 
 /*Game Info section*/
 #gameInfo {
-    /*border: 1px solid black;*/
     float: left;
     width: 9em;
     position: relative;
     height: 40vh;
-    /*border-radius: 15px;*/
-    /*display: inline-block;*/
     left: 200px;
     color: #de241b;
     font-weight: bold;
@@ -127,16 +120,9 @@ div > ul {
     transform: translate(0,30%);
 }
 
-
-.circle {
-    /*border-radius: 50vw;*/
-}
-
 .games-played {
     width: 6vw;
     height: 7vh;
-  /*  width: 6vw;
-    height: 9vh;*/
     background-color: white;
     border: 1px solid black;
 }
@@ -152,8 +138,6 @@ div > ul {
 .accuracy {
     width: 6vw;
     height: 7vh;
-/*    width: 6em;
-    height: 3.5em;*/
     background-color: white;
     border: 1px solid black;
 }
@@ -161,12 +145,11 @@ div > ul {
 .reset {
     position: absolute;
     top: 0;
-   /* background-color: white;*/
+    background-color: white;
     padding: .5em .5em;
     font-family: "Oswald", sans-serif;
     width: 8.20vw;
     height: 7vh;
-   /* border: 2px solid black;*/
     font-size: 1vw;
     font-weight: bold;
 }
@@ -177,7 +160,6 @@ button:focus {
 /*Game Section*/
 #game-area {
     margin: 0 10px;
-    /*border: 1px solid black;*/
     border-radius: 15px;
     display: inline-block;
     position: relative;
@@ -186,7 +168,6 @@ button:focus {
     height: 70vh;
     width: 55vw;
     transform: translateX(30%);
-    /*opacity: .5;*/
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
@@ -198,7 +179,6 @@ button:focus {
 
 .card {
     position: relative;
-    /*border: 1px solid black;*/
     left: 0;
     top: 0;
     perspective: 1000px;
@@ -251,13 +231,11 @@ body{
 }
 
 .front{
-   /* position: absolute;*/
     transform: rotateY(180deg);
 }
 .back{
     position: absolute;
     z-index: 2;
-    /* for firefox 31 */
     transform: rotateY(0deg);
 }
 .front img, .back img{
@@ -266,14 +244,8 @@ body{
 }
 .gridSquare{
     position: relative;
-    /*border: 1px solid black;*/
 
 }
-/*
-.flip {
-    transition-duration: .5s;
-    transform: rotateY(90deg);
-}*/
 
 .flip{
     transform: rotateY(180deg)
