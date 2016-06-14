@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Jitz Match</title>
+    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Oswald:400,300' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="style.css"/>
+    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+
+</head>
+<body>
+<div class="container">
+<!--Game Header-->
+    <div class="headerContainer">
+        <div id="header">
+            <h1>Jitz Match </h1>
+            <ul id="gameMenu">
+                <!--<li id="settings"><a href="#">Settings</a></li>-->
+                <li id="about"><a href="about.html">About</a></li>
+            </ul>
+            <img id="logo" src ="images/enjoyJiuJitsu1.jpg">
+        </div>
+    </div>
+<!--Stats section-->
+    <div class="stat-container">
+        <div id="gameInfo">
+
+            <button class="circle reset" type="button">Reset Game</button>
+
+            <br><br><br><br>
+
+            <ul class="circle games-played">
+                <li class="played">Games Played</li>
+                <li class="value"></li>
+            </ul>
+
+            <ul class="circle attempts">
+                <li class="label">Attempts</li>
+                <li class="value"></li>
+            </ul>
+
+            <ul class="circle accuracy">
+                <li class="label">Accuracy</li>
+                <li class="value"></li>
+            </ul>
+
+        </div>
+    </div>
+</div>
+<!--Game section-->
+    <div id="game-area">
+        <div id="winner">you win! oooossssss!!!</div>
+    </div>
+</div>
+</body>
+<script src="main.js"></script>
+<script src="card.js"></script>
+<script src="manager.js"></script>
+<!--checking display-->
+<!--<script src="script.js"></script>-->
+</html>

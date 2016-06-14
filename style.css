@@ -1,0 +1,252 @@
+body {
+    background-image: url("images/wallpaper1.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+}
+
+.headContainer {
+    width: 80%;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.stats-container {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+#header {
+    box-sizing: border-box;
+    height: 15vh;
+    position: relative;
+    margin-bottom: 5%;
+}
+/*the "Memory Match" text*/
+h1 {
+    text-align: center;
+    font-size: 5vw;
+    font-family: "Arial Black";
+    position: absolute;
+    left: 33%;
+    transform: translate(0, -50%);
+   /* text-shadow:
+            3px 3px 0 #000,
+            -1px -1px 0 #000,
+            1px -1px 0 #000,
+            -1px 1px 0 #000,
+            1px 1px 0 #000;*/
+    -webkit-text-fill-color: white; /* Will override color (regardless of order) */
+    -webkit-text-stroke-width: 5px;
+    -webkit-text-stroke-color: black;
+}
+/*the logo above the 2 links. the logo is a link itself. when clicked on in the about page it will send you back to the game*/
+#logo {
+    position: absolute;
+    width: 10vw;
+    height: 10vh;
+    top: 5px;
+    left: 40px;
+    border: 2px solid black;
+
+}
+
+/*the link position*/
+#gameMenu li {
+    list-style: none;
+    display: inline-block;
+    transform: translate(0, 300%);
+    font-size: 100%;
+    padding: 0 .5em;
+    position: relative;
+    float: left;
+    margin-right: 5px;
+    font-family: "Arial Black";
+}
+/*the text portion section for the links #settings a not made yet*/
+#about a {
+    color: #de241b;
+    text-decoration: none;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
+    transform: translate(100%, 80%);
+    /*transform: translate(0%, 80%);*/
+    position: static;
+    display: inline-block;
+}
+
+/*Game Info section*/
+#gameInfo {
+    float: left;
+    width: 9em;
+    position: relative;
+    height: 40vh;
+    left: 200px;
+    color: #de241b;
+    font-weight: bold;
+
+}
+
+#gameInfo li {
+    font-family: "Oswald", sans-serif;
+    font-size: 1vw;
+}
+
+div > ul {
+    font-weight: bold;
+    font-size: 1.25em;
+    list-style: none;
+}
+
+.label {
+    transform: translate(5%,30%);
+}
+
+.played {
+    transform: translate(-10%, 30%);
+}
+
+.value {
+    margin-right: 40%;
+    text-align: center;
+    transform: translate(0,30%);
+}
+
+.games-played {
+    width: 6vw;
+    height: 7vh;
+    background-color: white;
+    border: 1px solid black;
+}
+
+.attempts {
+    width: 6vw;
+    height: 7vh;
+    background-color: white;
+    border: 1px solid black;
+    top: 10px
+}
+
+.accuracy {
+    width: 6vw;
+    height: 7vh;
+    background-color: white;
+    border: 1px solid black;
+}
+
+.reset {
+    position: absolute;
+    top: 0;
+    background-color: white;
+    padding: .5em .5em;
+    font-family: "Oswald", sans-serif;
+    width: 8.20vw;
+    height: 7vh;
+    font-size: 1vw;
+    font-weight: bold;
+}
+/*removes the blue border that appears one the reset button has been clicked, blue border appears because I have styled the button*/
+button:focus {
+    outline:0;
+}
+/*Game Section*/
+#game-area {
+    margin: 0 10px;
+    border-radius: 15px;
+    display: inline-block;
+    position: relative;
+    display: flex;
+    flex-flow: row wrap;
+    height: 70vh;
+    width: 55vw;
+    transform: translateX(30%);
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-perspective: 1000px;
+    -moz-perspective: 1000px;
+    -ms-perspective: 1000px;
+    perspective: 1000px;
+}
+
+.card {
+    position: relative;
+    left: 0;
+    top: 0;
+    perspective: 1000px;
+    -webkit-transition-duration: 0.6s;
+    -moz-transition-duration:  0.6s;
+    -ms-transition-duration:  0.6s;
+    -o-transition-duration:  0.6s;
+    transition: 0.6s;
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    -ms-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+}
+
+#winner {
+    background-color:white;
+    border-radius: 50%;
+    padding: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: orangered;
+    font-family: Oswald, sans-serif;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 5em;
+    display: none;
+}
+
+/*about tab*/
+p {
+    font-family: Oswald, sans-serif;
+    font-weight: bold;
+    font-size: 2vw;
+    -webkit-text-fill-color: orangered; /* Will override color (regardless of order) */
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
+}
+
+body{
+    box-sizing: border-box;
+}
+
+.front, .back {
+    backface-visibility: hidden;
+    position: absolute;
+    top: 0;
+    left: 8px;
+}
+
+.front{
+    transform: rotateY(180deg);
+}
+.back{
+    position: absolute;
+    z-index: 2;
+    transform: rotateY(0deg);
+}
+.front img, .back img{
+    width:100%;
+    height: 100%;
+}
+.gridSquare{
+    position: relative;
+
+}
+
+.flip{
+    transform: rotateY(180deg)
+}
