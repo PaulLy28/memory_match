@@ -19,7 +19,6 @@ function Card(id, img, row, col, base, back, gameScope){
     this.backCard = $("<div>",{
         html: "<img src='" + base + back + "'>",
         class: "back"
-        //css: {"background": 'url(' + baseUrl + 'card-' + img + '.jpg) no-repeat'}
     });
 
 //method to append cards
@@ -31,7 +30,6 @@ function Card(id, img, row, col, base, back, gameScope){
     //hide toggles between cards and remove cards if match
     this.flipBack = function(){
         $(cardScope.card).toggleClass("flip");
-        /*$(cardScope.backCard).toggle();*/
     };
 
     this.testCard = function(){
