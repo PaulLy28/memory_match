@@ -234,7 +234,13 @@ button:focus {
     text-transform: uppercase;
     font-size: 5vw;
     text-align: center;
-    display: none;
+    text-shadow:
+            3px 3px 0 #000,
+            -1px -1px 0 #000,
+            1px -1px 0 #000,
+            -1px 1px 0 #000,
+            1px 1px 0 #000;
+    /*display: none;*/
 }
 
 /*about tab*/

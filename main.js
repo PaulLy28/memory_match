@@ -157,8 +157,7 @@ function GameLogic(gameManager){
                 first.card.addClass("matched").hide();
                 second.card.addClass("matched").hide();
                 attempts++;
-                if($(".matched").length == 2){ logicScope.win() };
-                /*if((".matched").length == 2) logicScope.config(game.config(5, cardimages, cardback, baseUrl));*/
+                if($(".matched").length == 18){ logicScope.win() };
             }
             else {
                 first.flipBack();
@@ -201,7 +200,6 @@ function GameLogic(gameManager){
         attempts = 0;
         accuracy = 0;
         games_played++;
-        /*matchCounter = 0;*/
         logicScope.board = [];
         logicScope.displayStats();
     };
