@@ -40,6 +40,13 @@ h1 {
     position: absolute;
     left: 33%;
     transform: translate(0, -50%);
+    color: #de241b;
+    text-shadow:
+            3px 3px 0 #000,
+            -1px -1px 0 #000,
+            1px -1px 0 #000,
+            -1px 1px 0 #000,
+            1px 1px 0 #000;
     -webkit-text-fill-color: #de241b; /* Will override color (regardless of order) */
     -webkit-text-stroke-width: 5px;
     -webkit-text-stroke-color: black;
@@ -80,6 +87,12 @@ h1 {
 #about a {
     color: #de241b;
     text-decoration: none;
+    text-shadow:
+            3px 3px 0 #000,
+            -1px -1px 0 #000,
+            1px -1px 0 #000,
+            -1px 1px 0 #000,
+            1px 1px 0 #000;
     -webkit-text-stroke-width: 1px;
     -webkit-text-stroke-color: black;
     -moz-text-stroke-width: 1px;
