@@ -21,6 +21,8 @@ body {
 .stats-container {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    -o-box-sizing: border-box;
     box-sizing: border-box;
 }
 
@@ -41,6 +43,15 @@ h1 {
     -webkit-text-fill-color: #de241b; /* Will override color (regardless of order) */
     -webkit-text-stroke-width: 5px;
     -webkit-text-stroke-color: black;
+    -moz-text-fill-color: #de241b;
+    -moz-text-stroke-width: 5px;
+    -moz-text-stroke-color: black;
+    -ms-text-fill-color: #de241b;
+    -ms-text-stroke-width: 5px;
+    -ms-text-stroke-color: black;
+    -o-text-fill-color: #de241b;
+    -o-text-stroke-width: 5px;
+    -o-text-stroke-color: black;
 }
 /*the logo above the 2 links. the logo is a link itself. when clicked on in the about page it will send you back to the game*/
 #logo {
@@ -71,9 +82,14 @@ h1 {
     text-decoration: none;
     -webkit-text-stroke-width: 1px;
     -webkit-text-stroke-color: black;
+    -moz-text-stroke-width: 1px;
+    -moz-text-stroke-color: black;
+    -ms-text-stroke-width: 1px;
+    -ms-text-stroke-color: black;
+    -o-text-stroke-width: 1px;
+    -o-text-stroke-color: black;
     font-size: 1vw;
     transform: translate(80%, 180%);
-    /*transform: translate(0%, 80%);*/
     display: inline-block;
 }
 
@@ -165,10 +181,13 @@ button:focus {
     transform: translateX(30%);
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    -o-box-sizing: border-box;
     box-sizing: border-box;
     -webkit-perspective: 1000px;
     -moz-perspective: 1000px;
     -ms-perspective: 1000px;
+    -o-perspective: 1000px;
     perspective: 1000px;
 }
 
@@ -185,6 +204,7 @@ button:focus {
     -webkit-transform-style: preserve-3d;
     -moz-transform-style: preserve-3d;
     -ms-transform-style: preserve-3d;
+    -o-transform-style: preserve-3d;
     transform-style: preserve-3d;
 }
 
@@ -213,6 +233,15 @@ p {
     -webkit-text-fill-color: black; /* Will override color (regardless of order) */
     -webkit-text-stroke-width: 1px;
     -webkit-text-stroke-color: black;
+    -moz-text-fill-color: black;
+    -moz-text-stroke-width: 1px;
+    -moz-text-stroke-color: black;
+    -ms-text-fill-color: black;
+    -ms-text-stroke-width: 1px;
+    -ms-text-stroke-color: black;
+    -o-text-fill-color: black;
+    -o-text-stroke-width: 1px;
+    -o-text-stroke-color: black;
 }
 
 body{
